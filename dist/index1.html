@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        @keyframes fill {
+            from { width: 0; }
+            to { width: var(--width); }
+        }
+        .progress-bar {
+            animation: fill 2s ease-in-out forwards;
+        }
+
+
+        /*About section*/
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fadeInUp {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        /*services section*/
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fadeInUp {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+
+        /*contacts section*/
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fadeInUp {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .fadeInUp button {
+            background: black;
+            color: #fff;
+        }
+        .fadeInUp button:hover {
+            color: black;
+        }
+        .input-focus {
+            border-color: #4F46E5;
+            box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.5);
+        }
+        
+    </style>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="fixed w-full bg-black p-7">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-lg font-bold">
+                <img src="./img/white-logo.png" alt="logo.png">
+            </div>
+            <div class="hidden md:flex space-x-7">
+                <a href="#Home" class="text-gray-100 hover:text-yellow-500 font-bold">Home</a>
+                <a href="#About" class="text-gray-100 hover:text-yellow-500 font-bold">About</a>
+                <a href="#Services" class="text-gray-100 hover:text-yellow-500 font-bold">Services</a>
+                <a href="#Skills" class="text-gray-100 hover:text-yellow-500 font-bold">Skills</a>
+                <a href="#Portfolio" class="text-gray-100 hover:text-yellow-500 font-bold">Portfolio</a>
+                <a href="#Contacts" class="text-gray-100 hover:text-yellow-500 font-bold">Contacts</a>
+            </div>
+            <div class="md:hidden ">
+                <button id="menu-btn" class="text-gray-100 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="menu" class="md:hidden ">
+            <a href="#Home" class="block px-2 py-1 text-sm text-gray-100 hover:text-red-500 text-center font-bold">Home</a>
+            <a href="#About" class="block px-2 py-1 text-sm text-gray-100 hover:text-red-500 text-center font-bold">About</a>
+            <a href="#Services" class="block px-2 py-1 text-sm text-gray-100 hover:text-red-500 text-center font-bold">Services</a>
+            <a href="#Skills" class="block px-2 py-1 text-sm text-gray-100 hover:text-red-500 text-center font-bold">Skills</a>
+            <a href="#Portfolio" class="block px-2 py-1 text-sm text-gray-100 hover:text-red-500 text-center font-bold">Portfolio</a>
+            <a href="#Contacts" class="block px-2 py-1 text-sm text-gray-100 hover:text-red-500 text-center font-bold">Contact</a>
+        </div>
+    </nav>
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!--main section-->
+    <main id="Home" class="bg-gray-100 py-14">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold pt-40 text-yellow-500 p-10"> Hi! there👋</h1>
+                <h1 class="text-4xl font-bold text-yellow-500 p-2">Hi!👋I'm <span class="text-red-500">Niraj Kumar </span></h1>
+                <h1 class="text-3xl text-yellow-500 font-bold "><span class="text-red-500">and</span> I am a Passionate <span id="element" class="text-4xl text-red-500 font-bold"></span></h1>
+                
+                <p class="text-black font-bold p-3">👋Hello 
+                  i am Niraj Kumar and i completed diploma in electronics engineering but i am interested fullstack web development <br> i am a fullstack web developer with one years of experience i recently completed a fullstack web development course<br>from pwskills.com which has given me the latest skills and knowledge in the fullstack web development <br> industry i learned practical skills in building website of clients... 
+                </p> <br>
+                <a href="./img/NirajCv.pdf" download class="bg-yellow-500 text-black font-bold m-9 py-1.5 px-2 rounded-lg fadeInUp">Download CV <i class="fa-solid fa-download fa-bounce"></i> </a>
+                <a href="#Contacts" class="bg-yellow-500 text-black font-bold  py-1.5 px-2 rounded-lg fadeInUp">Hire Me</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex flex-col justify-center">
+                    <h2 class="text-2xl text-yellow-500 mb-4 font-bold">Our Mission</h2>
+                    <p class="text-black mb-4 font-bold">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+                    </p>
+                    <p class="text-black mb-4 font-bold">
+                        Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, in pretium orci vestibulum eget.
+                    </p>
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="./img/Niraj.png" alt="Placeholder Image" class="rounded-lg shadow-lg ">
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <!--About section-->
+    <section id="About" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 fadeInUp">
+                <h2 class="text-3xl font-bold text-yellow-500">About Us</h2>
+                <p class="text-lg text-black font-bold mt-2">Learn more about our company and values</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="fadeInUp">
+                    <img src="./img/aboutMainImage.png" alt="About Us Image" class="rounded-lg shadow-lg">
+                </div>
+                <div class="fadeInUp">
+                    <h3 class="text-2xl font-semibold text-yellow-500 mb-4">Our Mission</h3>
+                    <p class="text-black mb-4 font-bold">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+                    </p>
+                    <p class="text-black mb-4 font-bold">
+                        Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, in pretium orci vestibulum eget.
+                    </p>
+                    <p class="text-black mb-4 font-bold">
+                        Maecenas vel nulla ut nisi scelerisque interdum. Phasellus vel purus eget eros auctor viverra. Donec tincidunt suscipit magna vel commodo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Services section-->
+    <section id="Services" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-yellow-500 fadeInUp">Our Services</h2>
+                <p class="text-lg text-black mt-2 font-bold fadeInUp">We specialize in website and mobile app development</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg fadeInUp">
+                    <div class="flex items-center justify-center h-16 w-16 mb-4 bg-blue-100 rounded-full">
+                        <svg class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 21h4M12 21V3m0 18H8m4 0h4M4 3h16M4 3L2.937 6.01a4.992 4.992 0 001.863 5.774 9.988 9.988 0 0110.4.291c.79-.514 1.686-1.054 2.8-1.055 2.21 0 4 1.79 4 4a4 4 0 01-4 4h-2.857c-1.044 1.154-2.417 2-4.143 2-1.726 0-3.1-.846-4.143-2H8.5a6.5 6.5 0 01-6.491-6.079l-.008-.205L2 6.01 4 3zm0 0V2m0 1L4 3l1.007.299m0 0L4 3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-yellow-500 ">Website Development</h3>
+                    <p class="text-black font-bold">
+                        Our expert developers create responsive and engaging websites tailored to your business needs.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg fadeInUp">
+                    <div class="flex items-center justify-center h-16 w-16 mb-4 bg-green-100 rounded-full">
+                        <svg class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1v22m0-22C7.5 3.2 4.5 7 4.5 12c0 1.1.2 2.2.6 3.3m2.3-.6C7.2 15.5 7 14.3 7 13c0-3.9 3.1-7 7-7 1.3 0 2.5.3 3.5.9m-7.4 8.7c.5.3 1 .5 1.6.6 1 .2 2.1 0 3-.6M21.4 12c0 2.3-.6 4.4-1.7 6.1M22 12c0-4.2-2.5-7.9-6.3-9.7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-yellow-500">Mobile App Development</h3>
+                    <p class="text-black font-bold">
+                        We build high-quality mobile applications that provide excellent user experiences on both iOS and Android platforms.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg fadeInUp">
+                    <div class="flex items-center justify-center h-16 w-16 mb-4 bg-yellow-100 rounded-full">
+                        <svg class="h-8 w-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-1h-1v-1H9V7h4v8zm-1-9V3a1 1 0 112 0v4h4a1 1 0 010 2h-1v5h1a1 1 0 110 2h-4v4a1 1 0 01-2 0v-4H7a1 1 0 110-2h1v-5H7a1 1 0 010-2h4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-yellow-500">UI/UX Design</h3>
+                    <p class="text-black font-bold">
+                        Our designers craft intuitive and attractive user interfaces to enhance user engagement and satisfaction.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--skills section-->
+    <section id="Skills" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-yellow-500">My Skills</h2>
+                <p class="text-lg text-black mt-2 font-bold">Here are some of my professional skills</p>
+            </div>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">HTML & CSS</h3>
+                    <div class="w-full bg-gray-100 rounded-full h-4">
+                        <div class="bg-blue-600 h-4 rounded-full progress-bar" style="--width: 90%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">JavaScript</h3>
+                    <div class="w-full bg-gray-100 rounded-full h-4">
+                        <div class="bg-yellow-500 h-4 rounded-full progress-bar" style="--width: 75%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">React</h3>
+                    <div class="w-full bg-gray-100 rounded-full h-4">
+                        <div class="bg-blue-400 h-4 rounded-full progress-bar" style="--width: 85%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Tailwind CSS</h3>
+                    <div class="w-full bg-gray-100 rounded-full h-4">
+                        <div class="bg-black h-4 rounded-full progress-bar" style="--width: 80%;"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800">Node.js</h3>
+                    <div class="w-full bg-gray-100 rounded-full h-4">
+                        <div class="bg-green-600 h-4 rounded-full progress-bar" style="--width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Projects section-->
+    <section id="Portfolio" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-yellow-500 fadeInUp">Our Projects</h2>
+                <p class="text-lg text-black mt-2 font-bold fadeInUp">Take a look at some of our recent work</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg fadeInUp">
+                    <img src="./img/Doctor.png" alt="Project 1" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-500">Project One</h3>
+                    <p class="text-black font-bold">
+                        A brief description of Project One. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg fadeInUp">
+                    <img src="./img/food.png" alt="Project 2" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-500">Project Two</h3>
+                    <p class="text-black font-bold">
+                        A brief description of Project Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg fadeInUp">
+                    <img src="./img/Music.png" alt="Project 3" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-500">Project Three</h3>
+                    <p class="text-black font-bold">
+                        A brief description of Project Three. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg fadeInUp">
+                    <img src="./img/Launching.png" alt="Project 4" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-500">Project Four</h3>
+                    <p class="text-black font-bold">
+                        A brief description of Project Four. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg fadeInUp">
+                    <img src="./img/portf.png" alt="Project 5" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-500">Project Five</h3>
+                    <p class="text-black font-bold">
+                        A brief description of Project Five. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg fadeInUp">
+                    <img src="./img/website.png" alt="Project 6" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-500">Project Six</h3>
+                    <p class="text-black font-bold">
+                        A brief description of Project Six. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contacts section-->
+    <section id="Contacts" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-yellow-500 fadeInUp">Contact Us</h2>
+                <p class="text-lg text-black font-bold mt-2 fadeInUp">Get in touch with us for any queries or collaborations</p>
+            </div>
+            <div class="max-w-lg mx-auto">
+                <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 gap-6">
+                    <input type="hidden" name="access_key" value="7c42e71e-1ee8-42e6-abd5-031666473bab">
+                    <div class="fadeInUp">
+                        <label for="name" class="block text-black font-bold">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 rounded-lg border-gray-300 focus:outline-none focus:border-gray-400 transition duration-300" required>
+                    </div>
+
+                    <div class="fadeInUp">
+                        <label for="email" class="block text-black font-bold">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-lg border-gray-300 focus:outline-none focus:border-gray-400 transition duration-300" required>
+                    </div>
+
+                    <div class="fadeInUp">
+                        <label for="message" class="block text-black font-bold">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-2 rounded-lg border-gray-300 focus:outline-none focus:border-gray-400 transition duration-300" required></textarea>
+                    </div>
+
+                    <div class="fadeInUp">
+                        <button type="submit" class=" bg-red-500 py-2 px-4 rounded-lg hover:bg-yellow-500 font-bold transition duration-300 ">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer section-->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap flex-col lg:flex-row -mx-4">
+                <div class="w-full lg:w-1/4 px-4 mb-8 lg:mb-0">
+                    <h4 class="text-white text-xl mb-4">About Us</h4>
+                    <p>We are a team of passionate developers creating beautiful and functional websites and applications.</p>
+                </div>
+                <div class="w-full lg:w-1/4 px-4 mb-8 lg:mb-0">
+                    <h4 class="text-white text-xl mb-4">Contact</h4>
+                    <ul>
+                        <li class="mb-2">
+                            <span class="block">Email: nirajbgs0@gmail.com</span>
+                        </li>
+                        <li class="mb-2">
+                            <span class="block">Phone: +123 456 7890</span>
+                        </li>
+                        <li class="mb-2">
+                            <span class="block">Address: Patna, Bihar, India</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full lg:w-1/4 px-4 mb-8 lg:mb-0">
+                    <h4 class="text-white text-xl mb-4">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#Home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li class="mb-2"><a href="#Services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li class="mb-2"><a href="#About" class="text-gray-400 hover:text-white">About</a></li>
+                        <li class="mb-2"><a href="#Portfolio" class="text-gray-400 hover:text-white">Projects</a></li>
+                        <li class="mb-2"><a href="#Contacts" class="text-gray-400 hover:text-white">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="w-full lg:w-1/4 px-4">
+                    <h4 class="text-white text-xl mb-4">Follow Us</h4>
+                    <div class="flex space-x-4 text-3xl">
+                        <a href="https://www.linkedin.com/in/niraj-kumar-%F0%9F%87%AE%F0%9F%87%B3-685a55254/" class="text-gray-400 hover:text-white">
+                            <i class="fa-brands fa-linkedin fa-shake"></i>
+                        </a>
+                        <a href="https://github.com/NirajKumaroy" class="text-gray-400 hover:text-white">
+                            <i class="fa-brands fa-square-github fa-flip"></i>
+                            
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fa-brands fa-youtube fa-bounce"></i>
+                            
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fa-brands fa-square-instagram fa-beat"></i>
+                        
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-600 mt-8 text-xl">
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
